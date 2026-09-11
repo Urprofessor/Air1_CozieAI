@@ -732,3 +732,16 @@
     .parrow{margin-top:118px}
     .pathway{padding:22px 18px}
   }
+
+  /* Hero 副标题 · 无序列表 */
+  ul.hero-points{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+  ul.hero-points li{position:relative;padding-left:20px;color:var(--muted-2);font-size:15px;line-height:1.6;max-width:60ch}
+  ul.hero-points li::before{content:"";position:absolute;left:2px;top:.62em;width:6px;height:6px;border-radius:50%;
+    background:var(--rose)}
+  :root[data-theme="dark"] ul.hero-points li{color:var(--on-dark-2)}
+
+  /* 模块2 · 安装须知 */
+  .install-note{margin:14px 0 0;font-size:14px;color:var(--muted-2);display:flex;align-items:center;gap:9px;line-height:1.5}
+  .install-note-tag{flex:none;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;
+    background:var(--rose-tint);color:#b85d77}
+  :root[data-theme="dark"] .install-note{color:var(--on-dark-2)}
