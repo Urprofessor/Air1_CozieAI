@@ -711,7 +711,13 @@
   /* 视频下方的灰色圆角衬底（对齐原模板 .zz-shot 观感） */
   .feat-swiper .slide-img{background:#f5f4f6;border-radius:22px;padding:26px 30px;align-self:stretch;align-items:center}
   :root[data-theme="dark"] .feat-swiper .slide-img{background:#26232a}
-  @media (max-width:760px){.slide-img video.shot{width:190px}.feat-swiper .slide-img{padding:22px}}
+  /* 手机：模块1 回到上下堆叠（文字在上、视频在下） */
+  @media (max-width:760px){
+    .slide-img video.shot{width:190px}
+    .feat-swiper .slide{flex-direction:column;align-items:stretch;gap:18px}
+    .feat-swiper .slide-txt{max-width:100%}
+    .feat-swiper .slide-img{align-self:center;padding:22px}
+  }
 
   /* 模块3：两条进入路径的步骤流 */
   .pathways{display:flex;flex-direction:column;gap:24px;margin-top:6px}
@@ -723,9 +729,10 @@
   .pathway-tag.full{background:var(--tint);color:var(--muted-2)}
   .pathway-head h3{margin:0;font-size:17px;font-weight:600;color:var(--ink)}
   .pathway-head .pw-sub{font-size:13px;color:var(--muted)}
-  .pathflow{display:flex;align-items:center;gap:6px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
+  .pathflow{display:flex;align-items:center;gap:6px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none;
+    scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
   .pathflow::-webkit-scrollbar{display:none}
-  .pstep{flex:0 0 auto;width:148px;text-align:center;align-self:flex-start}
+  .pstep{flex:0 0 auto;width:148px;text-align:center;align-self:flex-start;scroll-snap-align:center}
   /* 步骤图下方的灰色圆角衬底 */
   .pshot-mat{width:148px;background:#f5f4f6;border-radius:16px;padding:12px;
     box-shadow:var(--shadow-sm);display:block}
