@@ -185,7 +185,7 @@
 (function(){
   var links=[].slice.call(document.querySelectorAll('.jump a')), navMap={};
   links.forEach(function(a){var el=document.querySelector(a.getAttribute('href'));if(el)navMap[a.getAttribute('href')]=el;});
-  var anchorIds=['top','breastfeeding','sleep','wellness','platform','voices','download','history'], anchorMap={}, settlingHref='', settlingTimer=0;
+  var anchorIds=['top','what','install','howto'], anchorMap={}, settlingHref='', settlingTimer=0;
   anchorIds.forEach(function(id){var el=document.getElementById(id);if(el)anchorMap['#'+id]=el;});
   function anchorOffset(){
     var jump=document.querySelector('.jump'), topbar=document.querySelector('.topbar');
@@ -352,7 +352,7 @@ function initSwiper(id,dotsId){
   s.addEventListener('scroll',function(){var idx=Math.round(s.scrollLeft/slideW(s));
     dots.querySelectorAll('i').forEach(function(d,i){d.classList.toggle('on',i===idx);});},{passive:true});
 }
-initSwiper('com-swiper','com-dots');
+initSwiper('feat-swiper','feat-dots');
 var playT={};
 function swipePlay(id,btn){
   if(playT[id]){clearInterval(playT[id]);playT[id]=null;btn.textContent='▶';return;}
