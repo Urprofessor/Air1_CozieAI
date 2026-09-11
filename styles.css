@@ -705,7 +705,9 @@
   /* 模块1：轮播里的视频（复用 .slide-img .shot 尺寸体系） */
   .slide-img video.shot{width:210px;max-height:440px;height:auto;border-radius:18px;display:block;
     background:#000;object-fit:cover;box-shadow:0 20px 44px -24px rgba(36,15,27,.55)}
-  .feat-swiper .slide{align-items:center}
+  .feat-swiper .slide{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:44px}
+  .feat-swiper .slide-txt{max-width:440px;flex:0 1 auto}
+  .feat-swiper .slide-img{flex:0 0 auto;align-self:center}
   /* 视频下方的灰色圆角衬底（对齐原模板 .zz-shot 观感） */
   .feat-swiper .slide-img{background:#f5f4f6;border-radius:22px;padding:26px 30px;align-self:stretch;align-items:center}
   :root[data-theme="dark"] .feat-swiper .slide-img{background:#26232a}
