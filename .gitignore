@@ -1,0 +1,11 @@
+# 本地预览服务器（仅本地用，不部署）
+server.js
+
+# 原始单文件备份（5MB，不需要上线）
+index.original.html
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+node_modules/
+.vercel
