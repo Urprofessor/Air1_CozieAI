@@ -808,5 +808,72 @@
 
   /* 版本内的子模块小标题（数据分析等） */
   .submod-title{font-family:var(--serif);font-weight:500;font-size:20px;letter-spacing:0;
-    color:var(--ink);margin:56px 0 18px}
+    color:var(--ink);margin:56px 0 6px}
   .submod-summary{margin-top:26px}
+
+  /* ===================================================== */
+  /* 1.0 · 数据分析模块（三部分：关键指标 / 核心比率 / 总结）   */
+  /* ===================================================== */
+  .data-period{color:var(--muted);font-size:14px;margin:0 0 4px}
+  .data-block{margin-top:38px}
+  .data-block-label{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;
+    color:var(--ink);padding-bottom:9px;border-bottom:2px solid var(--rose);margin-bottom:4px}
+  .data-src{font-size:12px;color:var(--muted);margin:12px 0 0}
+
+  /* 增长卡 */
+  .grow-card{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:16px;
+    background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px 26px}
+  .grow-main{display:flex;align-items:center;gap:20px}
+  .gcol .gv{font-family:var(--serif);font-weight:500;font-size:34px;line-height:1;color:var(--ink);display:block}
+  .gcol .gl{font-size:12.5px;color:var(--muted);margin-top:6px;display:block}
+  .grow-arrow{font-size:24px;color:var(--rose)}
+  .grow-side{display:flex;gap:12px;margin-left:auto;flex-wrap:wrap}
+  .grow-pill{background:var(--rose-tint);border-radius:12px;padding:12px 16px;text-align:center;min-width:104px}
+  .grow-pill b{font-family:var(--serif);font-weight:500;font-size:22px;color:#b85d77;display:block;line-height:1}
+  .grow-pill span{font-size:12px;color:var(--muted-2);margin-top:5px;display:block}
+  :root[data-theme="dark"] .grow-pill{background:#3a2830}
+  :root[data-theme="dark"] .grow-pill b{color:#eeb6c0}
+
+  /* 指标卡网格 */
+  .metric-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+  .metric{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 20px}
+  .metric b{font-family:var(--serif);font-weight:500;font-size:38px;line-height:1;color:var(--ink);display:block}
+  .metric b .unit{font-size:16px;margin-left:3px;color:var(--muted-2)}
+  .metric .l{font-weight:600;font-size:14px;margin-top:11px;color:var(--ink)}
+  .metric .d{color:var(--muted);font-size:12.5px;margin-top:3px}
+  @media(max-width:860px){.metric-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.metric-grid{grid-template-columns:1fr}}
+
+  /* 漏斗 */
+  .funnel{margin-top:16px;display:flex;flex-direction:column;gap:14px}
+  .fn-row{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 20px}
+  .fn-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:11px;gap:12px}
+  .fn-name{font-weight:600;font-size:15px;color:var(--ink)}
+  .fn-uv{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--ink);flex:none}
+  .fn-bar{height:12px;border-radius:999px;background:var(--tint);overflow:hidden}
+  .fn-bar span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#f0b7c1,#e5808f)}
+  .fn-pct{display:flex;gap:16px;margin-top:10px;font-size:12.5px;color:var(--muted-2);flex-wrap:wrap}
+  .fn-pct .fn-rel{font-weight:600;color:#b85d77}
+  :root[data-theme="dark"] .fn-pct .fn-rel{color:#eeb6c0}
+
+  .funnel-foot{display:flex;gap:14px;margin-top:16px;flex-wrap:wrap}
+  .ff-hero{flex:1;min-width:210px;background:var(--rose-tint);border-radius:14px;padding:20px 24px}
+  .ff-hero b{font-family:var(--serif);font-weight:500;font-size:32px;color:#b85d77;line-height:1;display:block}
+  .ff-hero b i{font-style:normal;font-size:16px;margin-left:4px}
+  .ff-hero span{font-size:13px;color:var(--muted-2);margin-top:9px;display:block}
+  :root[data-theme="dark"] .ff-hero{background:#3a2830}
+  :root[data-theme="dark"] .ff-hero b{color:#eeb6c0}
+
+  /* 每日趋势图（Metabase 导出，2:1 宽图，2×2 排布） */
+  .trend-head{font-weight:600;font-size:14px;color:var(--muted-2);margin:26px 0 0}
+  .trend-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:14px}
+  .trend{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px 12px}
+  .trend figcaption{font-weight:600;font-size:13.5px;color:var(--ink);margin-bottom:10px}
+  .trend img{display:block;width:100%;height:auto;border-radius:8px;background:#fff}
+  @media(max-width:760px){.trend-grid{grid-template-columns:1fr}}
+
+  .data-summary{color:var(--body);font-size:15px;line-height:1.78;margin:14px 0 0;max-width:72ch}
+  @media(max-width:640px){
+    .grow-side{margin-left:0;width:100%}
+    .grow-pill{flex:1}
+  }

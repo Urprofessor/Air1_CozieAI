@@ -142,17 +142,89 @@
       </div>
     </div>
 
-    <!-- 模块 2 · 数据分析（统计与总结，数据待补） -->
-    <div class="wrap"><h3 class="submod-title">数据分析 · 统计与总结</h3></div>
-    <div class="stats">
-      <div class="wrap">
-        <div class="stat"><b>—</b><div class="l">【指标一】</div><div class="d">【占位说明】</div></div>
-        <div class="stat"><b>—</b><div class="l">【指标二】</div><div class="d">【占位说明】</div></div>
-        <div class="stat"><b>—</b><div class="l">【指标三】</div><div class="d">【占位说明】</div></div>
-        <div class="stat"><b>—</b><div class="l">【指标四】</div><div class="d">【占位说明】</div></div>
+    <!-- 模块 2 · 数据分析（统计与总结） -->
+    <div class="wrap">
+      <h3 class="submod-title">数据分析 · 统计与总结</h3>
+      <p class="data-period">累计表现 · 2026 / 8 / 7 – 9 / 18</p>
+
+      <!-- ① 关键指标 -->
+      <div class="data-block">
+        <div class="data-block-label">① 关键指标</div>
+
+        <!-- Air 1 新增绑定用户 · 增长卡 -->
+        <div class="grow-card">
+          <div class="grow-main">
+            <div class="gcol"><span class="gv">29,228</span><span class="gl">8/7 累计绑定用户</span></div>
+            <span class="grow-arrow">→</span>
+            <div class="gcol"><span class="gv">37,867</span><span class="gl">9/18 累计绑定用户</span></div>
+          </div>
+          <div class="grow-side">
+            <div class="grow-pill"><b>+8,639</b><span>期间新增绑定</span></div>
+            <div class="grow-pill"><b>~206</b><span>日均新增（人/天）</span></div>
+          </div>
+        </div>
+        <p class="data-src">数据来源：Metabase Card 536（累计值 MCP 直查，新增 / 日均为计算得出）</p>
+
+        <!-- 引导漏斗原始数据 · 指标卡 -->
+        <div class="metric-grid">
+          <div class="metric"><b>7,812</b><div class="l">欢迎页累计 UV</div><div class="d">进入新手引导欢迎页</div></div>
+          <div class="metric"><b>5,981</b><div class="l">Get Started 点击</div><div class="d">欢迎页内点击「开始引导」</div></div>
+          <div class="metric"><b>5,002</b><div class="l">完成页累计 UV</div><div class="d">完成 7 步新手引导</div></div>
+          <div class="metric"><b>1.95<span class="unit">分钟</span></b><div class="l">步骤页平均停留</div><div class="d">单步骤页平均时长</div></div>
+        </div>
+        <p class="data-src">数据来源：设备助手埋点（MCP 直出）</p>
+
+        <!-- 各指标每日趋势图 -->
+        <div class="trend-head">各指标每日趋势 · 8/7 – 9/18</div>
+        <div class="trend-grid">
+          <figure class="trend"><figcaption>欢迎页累计 UV · 每日趋势</figcaption><img src="pic/trend_welcome_uv.jpg" alt="欢迎页每日趋势" loading="lazy"></figure>
+          <figure class="trend"><figcaption>Get Started 点击 · 每日趋势</figcaption><img src="pic/trend_getstarted.jpg" alt="Get Started 点击每日趋势" loading="lazy"></figure>
+          <figure class="trend"><figcaption>完成页累计 UV · 每日趋势</figcaption><img src="pic/trend_complete_uv.jpg" alt="完成页每日趋势" loading="lazy"></figure>
+          <figure class="trend"><figcaption>步骤页平均停留 · 每日趋势</figcaption><img src="pic/trend_avgtime.jpg" alt="平均停留时长每日趋势" loading="lazy"></figure>
+        </div>
+      </div>
+
+      <!-- ② 核心比率 -->
+      <div class="data-block">
+        <div class="data-block-label">② 核心比率</div>
+
+        <div class="funnel">
+          <div class="fn-row">
+            <div class="fn-head"><span class="fn-name">期间新增绑定用户</span><span class="fn-uv">8,639</span></div>
+            <div class="fn-bar"><span style="width:100%"></span></div>
+            <div class="fn-pct"><span class="fn-rel">漏斗基数 100%</span></div>
+          </div>
+          <div class="fn-row">
+            <div class="fn-head"><span class="fn-name">欢迎页 UV</span><span class="fn-uv">7,812</span></div>
+            <div class="fn-bar"><span style="width:90.4%"></span></div>
+            <div class="fn-pct"><span class="fn-step">层级转化 90.4%</span><span class="fn-rel">相对新增绑定 90.4%</span></div>
+          </div>
+          <div class="fn-row">
+            <div class="fn-head"><span class="fn-name">点击「Get Started」</span><span class="fn-uv">5,981</span></div>
+            <div class="fn-bar"><span style="width:69.2%"></span></div>
+            <div class="fn-pct"><span class="fn-step">层级转化 76.6%</span><span class="fn-rel">相对新增绑定 69.2%</span></div>
+          </div>
+          <div class="fn-row">
+            <div class="fn-head"><span class="fn-name">完成 7 步引导</span><span class="fn-uv">5,002</span></div>
+            <div class="fn-bar"><span style="width:57.9%"></span></div>
+            <div class="fn-pct"><span class="fn-step">层级转化 83.6%</span><span class="fn-rel">相对新增绑定 57.9%</span></div>
+          </div>
+        </div>
+
+        <div class="funnel-foot">
+          <div class="ff-hero"><b>57.9%</b><span>整体转化 · 新增绑定 → 完成引导</span></div>
+          <div class="ff-hero"><b>64.0%</b><span>引导内转化 · 欢迎页 → 完成引导</span></div>
+          <div class="ff-hero"><b>1.95<i>分钟</i></b><span>步骤页平均停留时长</span></div>
+        </div>
+        <p class="data-src">数据来源：期间新增绑定为 Metabase Card 536（计算得出）；欢迎页 / Get Started / 完成引导为设备助手埋点（MCP 直出）。层级转化＝本层 ÷ 上一层；相对新增绑定＝本层 ÷ 新增绑定用户。</p>
+      </div>
+
+      <!-- ③ 总结 -->
+      <div class="data-block">
+        <div class="data-block-label">③ 总结</div>
+        <p class="data-summary">【占位总结】这里写一段对上面数据的解读，例如：期间新增绑定用户 8,639 人、日均约 206 人；新手引导从欢迎页到完成 7 步的整体转化率达 64.0%，其中「Get Started」点击率 76.6%、引导内完成率 83.6%，说明进入引导后的完成意愿较强；步骤页平均停留 1.95 分钟，用户愿意逐步跟随。可补充结论与下一步优化方向。</p>
       </div>
     </div>
-    <div class="wrap"><p class="sec-sub submod-summary">【占位总结】这里写一段对上面数据的解读与总结，例如整体使用趋势、问题解决率的变化、用户反馈亮点等。数据到位后替换即可。</p></div>
   </section>
 
   <!-- ============================================================= -->
