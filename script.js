@@ -5,7 +5,7 @@
 
 (function(){
   var EDIT_TTL = 3 * 24 * 60 * 60 * 1000;
-  var SAVE_KEY = 'momcozy_app_whats_new_2026_08_structure_v35_qr_en_break';
+  var SAVE_KEY = 'momcozy_device_assistant_v1v2v3_structure_v36';
   var NO_EDIT = 'nav, .topbar, .tnav, .edit-toolbar, .save-btn, .edit-hint, .badge, .btn, .icon-btn, svg, img, script, style, button';
   var TEXT_TAGS = /^(P|H1|H2|H3|H4|H5|H6|LI|A|SPAN|EM|B|STRONG|DIV|DT|DD|TD|TH|LABEL|SMALL)$/;
   var editMode = false;
@@ -185,7 +185,7 @@
 (function(){
   var links=[].slice.call(document.querySelectorAll('.jump a')), navMap={};
   links.forEach(function(a){var el=document.querySelector(a.getAttribute('href'));if(el)navMap[a.getAttribute('href')]=el;});
-  var anchorIds=['top','what','install','howto'], anchorMap={}, settlingHref='', settlingTimer=0;
+  var anchorIds=['v1','v2','v3'], anchorMap={}, settlingHref='', settlingTimer=0;
   anchorIds.forEach(function(id){var el=document.getElementById(id);if(el)anchorMap['#'+id]=el;});
   function anchorOffset(){
     var jump=document.querySelector('.jump'), topbar=document.querySelector('.topbar');
@@ -353,6 +353,7 @@ function initSwiper(id,dotsId){
     dots.querySelectorAll('i').forEach(function(d,i){d.classList.toggle('on',i===idx);});},{passive:true});
 }
 initSwiper('feat-swiper','feat-dots');
+initSwiper('v1-swiper','v1-dots');
 var playT={};
 function swipePlay(id,btn){
   if(playT[id]){clearInterval(playT[id]);playT[id]=null;btn.textContent='▶';return;}

@@ -761,3 +761,34 @@
   .install-note-tag{flex:none;font-size:12px;font-weight:600;padding:3px 10px;border-radius:999px;
     background:var(--rose-tint);color:#b85d77}
   :root[data-theme="dark"] .install-note{color:var(--on-dark-2)}
+
+  /* ===================================================== */
+  /* 设备助手 1.0 / 2.0 / 3.0 —— 版本标签（同为玫红系，浅→深，过渡克制） */
+  /* ===================================================== */
+  .k-v1{background:#f8e6e9;color:#8f4b58}
+  .k-v2{background:#f1cbd1;color:#8a4551}
+  .k-v3{background:#e9b3bc;color:#7d3a48}
+  :root[data-theme="dark"] .k-v1{background:#3a2830;color:#e9c2c9}
+  :root[data-theme="dark"] .k-v2{background:#452a33;color:#eeb6c0}
+  :root[data-theme="dark"] .k-v3{background:#52303a;color:#f2b0bc}
+
+  /* Hero 版本快捷芯片：可点击跳转 */
+  .chips-ver a.ver{cursor:pointer;transition:.16s}
+  .chips-ver a.ver:hover{border-color:var(--ink);box-shadow:var(--shadow-sm)}
+
+  /* 视频占位块（1.0 素材到位前，尺寸对齐 2.0 的 .slide-img video.shot） */
+  .ph-shot{width:210px;max-height:440px;height:380px;border-radius:18px;display:flex;
+    flex-direction:column;align-items:center;justify-content:center;gap:4px;text-align:center;
+    font-size:14px;font-weight:600;color:var(--muted-2);letter-spacing:.02em;
+    background:repeating-linear-gradient(135deg,#efeaec,#efeaec 10px,#e9e2e5 10px,#e9e2e5 20px);
+    border:1px dashed var(--line-2)}
+  .ph-shot small{font-size:11px;font-weight:500;color:var(--muted)}
+  :root[data-theme="dark"] .ph-shot{color:var(--on-dark-2);
+    background:repeating-linear-gradient(135deg,#2a262d,#2a262d 10px,#242027 10px,#242027 20px);
+    border-color:#3a343b}
+  @media (max-width:760px){.ph-shot{width:190px;height:340px}}
+
+  /* 版本内的子模块小标题（数据分析等） */
+  .submod-title{font-family:var(--serif);font-weight:500;font-size:20px;letter-spacing:0;
+    color:var(--ink);margin:56px 0 18px}
+  .submod-summary{margin-top:26px}
