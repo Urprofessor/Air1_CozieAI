@@ -873,6 +873,31 @@
   @media(max-width:760px){.trend-grid{grid-template-columns:1fr}}
 
   .data-summary{color:var(--body);font-size:15px;line-height:1.78;margin:14px 0 0;max-width:72ch}
+
+  /* ===================================================== */
+  /* 3.0 · 能力拓展（竖排演进条）                            */
+  /* ===================================================== */
+  .evo{display:flex;flex-direction:column;gap:16px;margin-top:8px}
+  .evo-item{display:flex;gap:22px;background:var(--surface);border:1px solid var(--line);
+    border-radius:16px;padding:26px 28px}
+  .evo-num{flex:none;width:52px;height:52px;border-radius:12px;background:var(--rose-tint);
+    display:flex;align-items:center;justify-content:center;
+    font-family:var(--serif);font-weight:500;font-size:26px;line-height:1;color:#b85d77}
+  .evo-body{flex:1;min-width:0}
+  .evo-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+  .evo-h h3{margin:0;font-size:18px;font-weight:600;color:var(--ink)}
+  .evo-tag{font-size:12.5px;font-weight:600;color:#b85d77;background:var(--rose-tint);
+    border-radius:999px;padding:4px 12px}
+  .evo-body ul{margin:0;padding-left:20px;color:var(--body);font-size:14.5px;line-height:1.7}
+  .evo-body li{margin:6px 0}
+  .evo-body li b{color:var(--ink);font-weight:600}
+  .evo-body ul ul{margin:6px 0 2px;padding-left:18px}
+  .evo-body ul ul li{margin:4px 0;color:var(--muted-2);font-size:13.5px}
+  :root[data-theme="dark"] .evo-num,:root[data-theme="dark"] .evo-tag{background:#3a2830;color:#eeb6c0}
+  @media(max-width:640px){
+    .evo-item{flex-direction:column;gap:14px;padding:22px 18px}
+    .evo-num{width:44px;height:44px;font-size:22px}
+  }
   @media(max-width:640px){
     .grow-side{margin-left:0;width:100%}
     .grow-pill{flex:1}
